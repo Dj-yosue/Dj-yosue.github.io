@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,16 +21,18 @@
             text-align: center;
             padding: 20px;
             animation: fadeInUp 1s ease-out;
+            transform-style: preserve-3d;
         }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(-20px) rotateX(60deg);
             }
+
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0) rotateX(0deg);
             }
         }
 
@@ -40,11 +43,10 @@
 
         .boton-me-conoces {
             display: inline-block;
-            padding: 14px 20px; /* Ajustado el tamaño del botón para móviles */
+            padding: 14px 50px;
             background-color: #30c7b5;
             color: #fff;
             text-decoration: none;
-            border: none;
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
@@ -62,23 +64,16 @@
             transform: translateY(2px);
         }
 
-        .separador {
-            background-color: #ffd3e0;
-            height: 5px;
-            margin: 10px 0;
-            animation: fadeIn 1s ease-out;
-        }
-
         .servicios {
             margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around; /* Ajuste en el espacio entre servicios */
+            justify-content: space-between;
             text-align: center;
         }
 
         .servicio {
-            width: 45%; /* Cambiado el ancho para móviles */
+            width: 30%;
             margin-bottom: 20px;
             padding: 15px;
             background-color: #fff;
@@ -100,18 +95,46 @@
             color: #2ecc71;
         }
 
+        .boton-servicio {
+            display: inline-block;
+            padding: 12px 80px;
+            background-color: #30c7b5;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton-servicio:hover {
+            background-color: #25a999;
+        }
+
         .redes-sociales {
             margin-top: 20px;
             text-align: center;
         }
 
         .logo-pequeno {
-            width: 75px;
+            width: 120px;
             height: 75px;
             border-radius: 50%;
         }
+
+        .linea-divisora {
+            border: none;
+            border-top: 2px solid #30c7b5;
+            width: 100px;
+            margin-top: 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -122,30 +145,36 @@
 
     <section>
         <h2>Servicio de música DJ Yosue</h2>
-        <hr class="separador">
+        <p>Aquí puedes agregar la descripción o cualquier texto adicional sobre el servicio de música de DJ Yosue.</p>
+        <hr class="linea-divisora">
     </section>
 
     <section class="servicios">
         <div class="servicio">
-            <img src="fotos_de_servicio/musica_de_evento.jpg" alt="Servicio para eventos">
+            <img src="fotos_de_servicio\musica_de_evento.jpg" alt="Servicio para eventos">
             <h3>Servicio para eventos</h3>
             <p>Mi mayor compromiso es la creación del sonido perfecto para cada ocasión especial.</p>
         </div>
         <div class="servicio">
-            <img src="fotos_de_servicio/fiesta_privadas.jpg" alt="Fiestas privadas">
+            <img src="fotos_de_servicio\fiesta_privadas.jpg" alt="Fiestas privadas">
             <h3>Fiestas privadas</h3>
             <p>Mi misión es convertir tus fiestas privadas en eventos memorables.</p>
         </div>
         <div class="servicio">
-            <img src="fotos_de_servicio/fiesta_de_15_años.jpg" alt="Fiesta para 15 años">
+            <img src="fotos_de_servicio\fiesta_de_15_años.jpg" alt="Fiesta para 15 años">
             <h3>Fiesta para 15 años</h3>
             <p>Tu fiesta de 15 años merece una selección musical especial.</p>
         </div>
     </section>
 
+    <!-- Nuevo botón de servicio -->
+    <section>
+        <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="boton-servicio">Servicio de DJ</a>
+    </section>
+
     <section>
         <h2>Deja que la música te lleve a lugares donde la libertad reina</h2>
-        <img class="logo-pequeno" src="fotos_de_servicio/logo_pequeno.jpg" alt="Logo pequeño">
+        <img class="logo-pequeno" src="fotos_de_servicio\logo_pequeño.jpg" alt="Logo pequeño">
         <p>DJ Yosue</p>
     </section>
 
@@ -157,10 +186,10 @@
 
     <section class="redes-sociales">
         <h2>Redes Sociales</h2>
-        <a href="enlace_facebook" target="_blank">Facebook</a>
-        <a href="enlace_instagram" target="_blank">Instagram</a>
-        <a href="enlace_tiktok" target="_blank">TikTok</a>
+        <a href="https://instagra.com/dj_yosuealejandro?igshid=OGQ5ZDk2ZA==" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@djyosue?_t=8hTJiuOeC8b&_r=1" target="_blank">TikTok</a>
     </section>
 
 </body>
+
 </html>

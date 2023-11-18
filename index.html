@@ -15,7 +15,7 @@
         }
 
         header {
-            background: url('fotos_de_servicio/foto_de_fondo_inicio.jpg') center/cover no-repeat; /* Corrección en la ruta de la imagen de fondo */
+            background: url('fotos_de_servicio/foto_de_fondo_inicio.jpg') center/cover no-repeat;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -40,7 +40,7 @@
 
         .boton-me-conoces {
             display: inline-block;
-            padding: 14px 50px;
+            padding: 14px 20px; /* Ajustado el tamaño del botón para móviles */
             background-color: #30c7b5;
             color: #fff;
             text-decoration: none;
@@ -64,8 +64,8 @@
 
         .separador {
             background-color: #ffd3e0;
-            height: 10px;
-            margin: 20px 0;
+            height: 5px;
+            margin: 10px 0;
             animation: fadeIn 1s ease-out;
         }
 
@@ -73,12 +73,12 @@
             margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around; /* Ajuste en el espacio entre servicios */
             text-align: center;
         }
 
         .servicio {
-            width: 30%;
+            width: 45%; /* Cambiado el ancho para móviles */
             margin-bottom: 20px;
             padding: 15px;
             background-color: #fff;
@@ -120,41 +120,40 @@
         <a href="https://sites.google.com/view/dj-yosue/me-conoces" class="boton-me-conoces">¿Me conoces?</a>
     </header>
 
+    <section>
+        <h2>Servicio de música DJ Yosue</h2>
+        <hr class="separador">
+    </section>
+
     <section class="servicios">
         <div class="servicio">
-            <img src="fotos_de_servicio\musica_de_evento.jpg" alt="Servicio para eventos">
+            <img src="fotos_de_servicio/musica_de_evento.jpg" alt="Servicio para eventos">
             <h3>Servicio para eventos</h3>
             <p>Mi mayor compromiso es la creación del sonido perfecto para cada ocasión especial.</p>
         </div>
         <div class="servicio">
-            <img src="fotos_de_servicio\fiesta_privadas.jpg" alt="Fiestas privadas">
+            <img src="fotos_de_servicio/fiesta_privadas.jpg" alt="Fiestas privadas">
             <h3>Fiestas privadas</h3>
             <p>Mi misión es convertir tus fiestas privadas en eventos memorables.</p>
         </div>
         <div class="servicio">
-            <img src="fotos_de_servicio\fiesta_de_15_años.jpg" alt="Fiesta para 15 años">
+            <img src="fotos_de_servicio/fiesta_de_15_años.jpg" alt="Fiesta para 15 años">
             <h3>Fiesta para 15 años</h3>
             <p>Tu fiesta de 15 años merece una selección musical especial.</p>
         </div>
     </section>
 
-    <div class="separador"></div>
-
     <section>
         <h2>Deja que la música te lleve a lugares donde la libertad reina</h2>
-        <img class="logo-pequeno" src="fotos_de_servicio\logo_pequeño.jpg" alt="Logo pequeño">
+        <img class="logo-pequeno" src="fotos_de_servicio/logo_pequeno.jpg" alt="Logo pequeño">
         <p>DJ Yosue</p>
     </section>
-
-    <div class="separador"></div>
 
     <section>
         <h2>Música DJ Yosue</h2>
         <p>Entra en el Spotify de DJ Yosue y escucha nuestros sets mezclados con diferentes temáticas e intensidades</p>
         <!--<img src="ruta/foto_musica.jpg" alt="Agregar dirección de foto música">-->
     </section>
-
-    <div class="separador"></div>
 
     <section class="redes-sociales">
         <h2>Redes Sociales</h2>

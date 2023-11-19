@@ -21,18 +21,17 @@
             text-align: center;
             padding: 20px;
             animation: fadeInUp 1s ease-out;
-            transform-style: preserve-3d;
         }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(-20px) rotateX(60deg);
+                transform: translateY(-20px);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0) rotateX(0deg);
+                transform: translateY(0);
             }
         }
 
@@ -120,7 +119,7 @@
         }
 
         .logo-pequeno {
-            width: 120px;
+            width: 75px;
             height: 75px;
             border-radius: 50%;
         }
@@ -131,6 +130,43 @@
             width: 100px;
             margin-top: 20px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .contacto {
+            background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            animation: fadeInUp 1s ease-out;
+            margin-top: 20px;
+        }
+
+        .contacto h2 {
+            margin-bottom: 10px;
+        }
+
+        .contacto p {
+            margin-bottom: 20px;
+        }
+
+        .boton-contacto {
+            display: inline-block;
+            padding: 12px 80px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .boton-contacto:hover {
+            background-color: #fff;
+            color: #333;
         }
     </style>
 </head>
@@ -182,6 +218,12 @@
         <h2>Música DJ Yosue</h2>
         <p>Entra en el Spotify de DJ Yosue y escucha nuestros sets mezclados con diferentes temáticas e intensidades</p>
         <!--<img src="ruta/foto_musica.jpg" alt="Agregar dirección de foto música">-->
+    </section>
+
+    <section class="contacto">
+        <h2>¿Vamos de ruta?</h2>
+        <p>Si tienes alguna duda o consulta, no dudes en ponerte en contacto con nosotros… 🙂</p>
+        <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="boton-contacto">¡Hazlo Sonar!</a>
     </section>
 
     <section class="redes-sociales">

@@ -40,32 +40,27 @@
             text-align: center;
         }
 
-        .fondo-color {
-            background-color: #eacee7; /* Nuevo fondo de color */
-            padding: 20px; /* Agregado padding */
-        }
-
-        .boton-me-conoces {
+        .boton-me-conoces,
+        .boton-servicio,
+        .boton-hablemos {
             display: inline-block;
-            padding: 14px 50px;
+            padding: 12px 80px;
             background-color: #30c7b5;
             color: #fff;
             text-decoration: none;
+            border: none;
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
             font-family: 'Lato', sans-serif;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s ease;
         }
 
-        .boton-me-conoces:hover {
+        .boton-me-conoces:hover,
+        .boton-servicio:hover,
+        .boton-hablemos:hover {
             background-color: #25a999;
-        }
-
-        .boton-me-conoces:active {
-            background-color: #1d897e;
-            transform: translateY(2px);
         }
 
         .servicios {
@@ -99,31 +94,28 @@
             color: #2ecc71;
         }
 
-        .boton-servicio {
-            display: inline-block;
-            padding: 12px 80px;
-            background-color: #30c7b5;
-            color: #fff;
-            text-decoration: none;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: 'Lato', sans-serif;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .boton-servicio:hover {
-            background-color: #25a999;
-        }
-
         .redes-sociales {
             margin-top: 20px;
             text-align: center;
         }
 
-        .logo-pequeno {
+        .redes-sociales a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #30c7b5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .redes-sociales a:hover {
+            background-color: #25a999;
+        }
+
+        .logo-pequeno,
+        .logo-abajo img {
             width: 75px;
             height: 75px;
             border-radius: 50%;
@@ -137,53 +129,63 @@
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .contacto {
-            background: url('fotos_de_servicio/fondo_contacto.jpg') center/cover no-repeat;
+        /* Nueva sección para los botones en el footer */
+        .botones-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        /* Nueva sección para el logo abajo de los botones */
+        .logo-abajo {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logo-abajo img {
+            width: 50%; /* Ajuste de tamaño */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Nueva sección para la imagen de fondo "¿Vamos de ruta?" */
+        .vamos-de-ruta {
+            background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat; /* Fondo de la imagen */
             color: #fff;
             text-align: center;
             padding: 20px;
             animation: fadeInUp 1s ease-out;
             margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
-        .contacto h2 {
-            margin-bottom: 10px;
+        .vamos-de-ruta h2,
+        .vamos-de-ruta p,
+        .vamos-de-ruta a {
+            color: #fff;
         }
 
-        .contacto p {
-            margin-bottom: 20px;
-        }
-
-        .boton-contacto {
+        .vamos-de-ruta a {
             display: inline-block;
             padding: 12px 80px;
             background-color: transparent;
             color: #fff;
             text-decoration: none;
-            border: 2px solid #fff;
+            border: 2px solid #fff; /* Línea blanca alrededor del botón */
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
             font-family: 'Lato', sans-serif;
             font-weight: bold;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
-        .boton-contacto:hover {
+        .vamos-de-ruta a:hover {
             background-color: #fff;
-            color: #333;
+            color: #30c7b5;
         }
-
-        /* Nueva clase para el fondo de "¿Vamos de ruta?" */
-        .fondo-ruta {
-            background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            animation: fadeInUp 1s ease-out;
-            margin-top: 20px;
-        }
-
     </style>
 </head>
 
@@ -197,7 +199,7 @@
 
     <section>
         <h2>Servicio de música DJ Yosue</h2>
-        <p>Aquí puedes agregar la descripción o cualquier texto adicional sobre el servicio de música de DJ Yosue.</p>
+        <p></p>
         <hr class="linea-divisora">
     </section>
 
@@ -219,27 +221,46 @@
         </div>
     </section>
 
-    <!-- Nuevo botón de servicio -->
     <section>
         <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="boton-servicio">Servicio de DJ</a>
     </section>
 
-    <section class="fondo-color"> <!-- Agregada la clase para el fondo de color -->
+    <section>
         <h2>Deja que la música te lleve a lugares donde la libertad reina</h2>
         <img class="logo-pequeno" src="fotos_de_servicio\logo_pequeño.jpg" alt="Logo pequeño">
         <p>DJ Yosue</p>
     </section>
 
-    <section class="fondo-ruta"> <!-- Nueva sección con la clase para el fondo de "¿Vamos de ruta?" -->
-        <h2>¿Vamos de ruta?</h2>
-        <p>Si tienes alguna duda o consulta, no dudes en ponerte en contacto con nosotros… 🙂</p>
-        <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="boton-contacto">¡Hazlo Sonar!</a>
+    <section>
+        <h2>Música DJ Yosue</h2>
+        <p>Entra en el Spotify de DJ Yosue y escucha nuestros sets mezclados con diferentes temáticas e intensidades</p>
+        <!--<img src="ruta/foto_musica.jpg" alt="Agregar dirección de foto música">-->
     </section>
 
+    <!-- Nueva sección para el fondo "¿Vamos de ruta?" -->
+    <section class="vamos-de-ruta">
+        <h2>¿Vamos de ruta?</h2>
+        <p>Si tienes alguna duda o consulta, no dudes en ponerte en contacto con nosotros… 🙂</p>
+        <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="boton-hablemos">¡Hazlo Sonar!</a>
+    </section>
+
+    <!-- Nueva sección para las redes sociales -->
     <section class="redes-sociales">
         <h2>Redes Sociales</h2>
         <a href="https://instagra.com/dj_yosuealejandro?igshid=OGQ5ZDk2ZA==" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@djyosue?_t=8hTJiuOeC8b&_r=1" target="_blank">TikTok</a>
+    </section>
+
+    <!-- Nueva sección para los botones en el footer -->
+    <section class="botones-footer">
+        <a href="https://sites.google.com/view/dj-yosue/me-conoces" class="boton-me-conoces">¿Me conoces?</a>
+        <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="boton-servicio">Servicio de DJ</a>
+        <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="boton-hablemos">¡Hablemos!</a>
+    </section>
+
+    <!-- Nueva sección para el logo abajo de los botones -->
+    <section class="logo-abajo">
+        <img src="fotos_de_servicio\imagen_del_logo_abajo.jpg" alt="Logo abajo">
     </section>
 
 </body>

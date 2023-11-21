@@ -12,7 +12,7 @@ header {
   background: url('fotos_de_servicio/foto_de_fondo_inicio.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 50px;
   animation: fadeInUp 1s ease-out;
 }
 
@@ -64,28 +64,7 @@ section {
   text-align: center;
 }
 
-.servicio {
-  width: 30%;
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-  animation: fadeInUp 1s ease-out;
-}
 
-.servicio img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.servicio h3 {
-  color: #2ecc71;
-}
 
 .redes-sociales {
 margin-top: 20px;
@@ -190,7 +169,7 @@ text-shadow: 0 0 15px #4267B2;
 
 /* Nueva sección para el logo abajo de los botones */
 .logo-abajo {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -205,7 +184,7 @@ text-shadow: 0 0 15px #4267B2;
   background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat; /* Fondo de la imagen */
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   animation: fadeInUp 1s ease-out;
   margin-top: 20px;
   border-radius: 8px;

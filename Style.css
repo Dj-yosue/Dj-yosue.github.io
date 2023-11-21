@@ -88,24 +88,82 @@ section {
 }
 
 .redes-sociales {
-    margin-top: 20px;
-    text-align: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.redes-sociales ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.redes-sociales li {
+  margin: 0 15px; /* Espaciado entre los elementos */
 }
 
 .redes-sociales a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #30c7b5;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  position: relative;
+  display: block;
+  color: #666;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  background: #171515;
+  line-height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .5s;
 }
 
-.redes-sociales a:hover {
-    background-color: #25a999;
+.redes-sociales a:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  transform: scale(.9);
+  z-index: -1;
+  transition: .5s;
 }
+
+/* Establecer colores de fondo para cada ícono de red social */
+.redes-sociales a:nth-child(1):before {
+  background: #4267B2; /* Facebook */
+}
+
+.redes-sociales a:nth-child(2):before {
+  background: #1DA1F2; /* Twitter */
+}
+
+.redes-sociales a:nth-child(3):before {
+  background: #E1306C; /* Instagram */
+}
+
+.redes-sociales a:nth-child(4):before {
+  background: #921ec7; /* LinkedIn */
+}
+
+.redes-sociales a:nth-child(5):before {
+  background: #ff0000; /* YouTube */
+}
+
+.redes-sociales a:hover:before {
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+/* Cambiar color y sombra al pasar el ratón sobre cada ícono */
+.redes-sociales a:hover  {
+  color: #456cba;
+  box-shadow: 0 0 15px #4267B2;
+  text-shadow: 0 0 15px #4267B2;
+  
+}
+
 
 .logo-pequeno,
 .logo-abajo img {
@@ -278,14 +336,6 @@ img {
       order: 2;
     }
   }
-/* Modificación para hacer el fondo de la sección más grande */
-header {
-    background: url('fotos_de_servicio/foto_de_fondo_inicio.jpg') center/cover no-repeat;
-    color: #fff;
-    text-align: center;
-    padding: 60px; /* Aumenta el padding para dar más espacio al contenido */
-    animation: fadeInUp 1s ease-out;
-}
 
 
 /* Resto de estilos... (copiar desde aquí hasta el final del archivo) */

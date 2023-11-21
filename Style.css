@@ -278,5 +278,14 @@ img {
       order: 2;
     }
   }
+/* Modificación para hacer el fondo de la sección más grande */
+header {
+    background: url('fotos_de_servicio/foto_de_fondo_inicio.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 60px; /* Aumenta el padding para dar más espacio al contenido */
+    animation: fadeInUp 1s ease-out;
+}
+
 
 /* Resto de estilos... (copiar desde aquí hasta el final del archivo) */

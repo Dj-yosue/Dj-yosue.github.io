@@ -5,263 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ Yosue - Música para eventos y fiestas privadas</title>
-    <style>
-        /* Estilos previos al nuevo código del slider */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            background: url('fotos_de_servicio/foto_de_fondo_inicio.jpg') center/cover no-repeat;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .boton-me-conoces,
-        .boton-servicio,
-        .boton-hablemos {
-            display: inline-block;
-            padding: 12px 80px;
-            background-color: #30c7b5;
-            color: #fff;
-            text-decoration: none;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: 'Lato', sans-serif;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .boton-me-conoces:hover,
-        .boton-servicio:hover,
-        .boton-hablemos:hover {
-            background-color: #25a999;
-        }
-
-        .servicios {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            text-align: center;
-        }
-
-        .servicio {
-            width: 30%;
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .servicio img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .servicio h3 {
-            color: #2ecc71;
-        }
-
-        .redes-sociales {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .redes-sociales a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #30c7b5;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .redes-sociales a:hover {
-            background-color: #25a999;
-        }
-
-        .logo-pequeno,
-        .logo-abajo img {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-        }
-
-        .linea-divisora {
-            border: none;
-            border-top: 2px solid #30c7b5;
-            width: 100px;
-            margin-top: 20px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Nueva sección para los botones en el footer */
-        .botones-footer {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            padding: 0 20px;
-        }
-
-        /* Nueva sección para el logo abajo de los botones */
-        .logo-abajo {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .logo-abajo img {
-            width: 30%; /* Ajuste de tamaño */
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Nueva sección para la imagen de fondo "¿Vamos de ruta?" */
-        .vamos-de-ruta {
-            background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat; /* Fondo de la imagen */
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            animation: fadeInUp 1s ease-out;
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .vamos-de-ruta h2,
-        .vamos-de-ruta p,
-        .vamos-de-ruta a {
-            color: #fff;
-        }
-
-        .vamos-de-ruta a {
-            display: inline-block;
-            padding: 12px 80px;
-            background-color: transparent;
-            color: #fff;
-            text-decoration: none;
-            border: 2px solid #fff; /* Línea blanca alrededor del botón */
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: 'Lato', sans-serif;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .vamos-de-ruta a:hover {
-            background-color: #fff;
-            color: #30c7b5;
-        }
-
-        /* Estilos del slider */
-        .container__slider {
-            max-width: 1000px;
-            height: 500px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px 10px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 800px;
-            height: 100%;
-            max-height: 600px;
-            transform-style: preserve-3d;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        input[type=radio] {
-            display: none;
-        }
-
-        .cards {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .card {
-            position: absolute;
-            width: 60%;
-            height: 100%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            -o-object-fit: cover;
-            object-fit: cover;
-        }
-
-        #item-2:checked ~ .cards #selector-1,
-        #item-1:checked ~ .cards #selector-3,
-        #item-3:checked ~ .cards #selector-2 {
-            transform: translateX(-40%) scale(0.8);
-            opacity: 0.6;
-            z-index: 0;
-        }
-
-        #item-3:checked ~ .cards #selector-1,
-        #item-1:checked ~ .cards #selector-2,
-        #item-2:checked ~ .cards #selector-3 {
-            transform: translateX(50%) scale(0.8);
-            opacity: 0.6;
-            z-index: 0;
-        }
-
-        #item-1:checked ~ .cards #selector-1,
-        #item-2:checked ~ .cards #selector-2,
-        #item-3:checked ~ .cards #selector-3 {
-            transform: translateX(0) scale(1);
-            z-index: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
@@ -330,26 +74,25 @@
     </section>
 
     <!-- Nueva sección para las redes sociales -->
-<section class="redes-sociales">
-    <h2>Redes Sociales</h2>
-    <a href="https://instagra.com/dj_yosuealejandro?igshid=OGQ5ZDk2ZA==" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@djyosue?_t=8hTJiuOeC8b&_r=1" target="_blank">TikTok</a>
-</section>
+    <section class="redes-sociales">
+        <h2>Redes Sociales</h2>
+        <a href="https://instagra.com/dj_yosuealejandro?igshid=OGQ5ZDk2ZA==" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@djyosue?_t=8hTJiuOeC8b&_r=1" target="_blank">TikTok</a>
+    </section>
 
-</section>
+    </section>
 
-<!-- Nueva sección para los botones en el footer -->
-<section class="botones-footer">
-    <a href="https://sites.google.com/view/dj-yosue/me-conoces" class="boton-me-conoces">¿Me conoces?</a>
-    <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="boton-servicio">Servicio de DJ</a>
-    <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="boton-hablemos">¡Hablemos!</a>
-</section>
+    <!-- Nueva sección para los botones en el footer -->
+    <section class="botones-footer">
+        <a href="https://sites.google.com/view/dj-yosue/me-conoces" class="boton-me-conoces">¿Me conoces?</a>
+        <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="boton-servicio">Servicio de DJ</a>
+        <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="boton-hablemos">¡Hablemos!</a>
+    </section>
 
-<!-- Nueva sección para el logo abajo de los botones -->
-<section class="logo-abajo">
-    <img src="fotos_de_servicio\imagen_del_logo_abajo.jpg" alt="Logo abajo">
-</section>
-
+    <!-- Nueva sección para el logo abajo de los botones -->
+    <section class="logo-abajo">
+        <img src="fotos_de_servicio\imagen_del_logo_abajo.jpg" alt="Logo abajo">
+    </section>
 
 </body>
 

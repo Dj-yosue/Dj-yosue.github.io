@@ -169,7 +169,7 @@ text-shadow: 0 0 15px #4267B2;
 
 /* Nueva sección para el logo abajo de los botones */
 .logo-abajo {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -184,7 +184,7 @@ text-shadow: 0 0 15px #4267B2;
   background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat; /* Fondo de la imagen */
   color: #fff;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   animation: fadeInUp 1s ease-out;
   margin-top: 20px;
   border-radius: 8px;
@@ -455,3 +455,43 @@ body {
 
 
 /* Resto de estilos... (copiar desde aquí hasta el final del archivo) */
+.resolucion {
+  width: 99%;
+  text-align: center;
+}
+
+
+/**Movil**/
+
+@media (max-width: 767px) {
+  .desktop {
+      display: none;
+  }
+  .tablet {
+      display: none;
+  }
+}
+
+
+/**Tablet**/
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .desktop {
+      display: none;
+  }
+  .movil {
+      display: none;
+  }
+}
+
+
+/**Escritorio**/
+
+@media (min-width: 991px) {
+  .tablet {
+      display: none;
+  }
+  .movil {
+      display: none;
+  }
+}

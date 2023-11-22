@@ -18,13 +18,13 @@ header {
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
 
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -37,7 +37,7 @@ section {
 
 /* Resto de estilos... (copiar desde aquí hasta el final del archivo) */
 
-/* Nuevos estilos para el botón */
+/* Nueva sección para el nuevo botón */
 .nuevo-boton {
   text-align: center;
   margin-top: 20px;
@@ -96,167 +96,12 @@ section {
   transform: skew(20deg, 0deg) scale(1.1);
 }
 
-
-
-.servicios {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: center;
-}
-
-
-
-.redes-sociales {
-margin-top: 20px;
-text-align: center;
-}
-
-.redes-sociales ul {
-padding: 0;
-list-style: none;
-display: flex;
-justify-content: center; /* Centra los elementos horizontalmente */
-}
-
-.redes-sociales li {
-margin: 0 15px; /* Espaciado entre los elementos */
-}
-
-.redes-sociales a {
-position: relative;
-display: block;
-color: #666;
-font-size: 30px;
-height: 60px;
-width: 60px;
-background: #171515;
-line-height: 60px;
-border-radius: 50%;
-cursor: pointer;
-transition: .5s;
-}
-
-.redes-sociales a:before {
-position: absolute;
-content: '';
-top: 0;
-left: 0;
-height: inherit;
-width: inherit;
-border-radius: 50%;
-transform: scale(.9);
-z-index: -1;
-transition: .5s;
-}
-
-/* Establecer colores de fondo para cada ícono de red social */
-.redes-sociales a:nth-child(1):before {
-background: #4267B2; /* Facebook */
-}
-
-.redes-sociales a:nth-child(2):before {
-background: #1DA1F2; /* Twitter */
-}
-
-.redes-sociales a:nth-child(3):before {
-background: #E1306C; /* Instagram */
-}
-
-.redes-sociales a:nth-child(4):before {
-background: #921ec7; /* LinkedIn */
-}
-
-.redes-sociales a:nth-child(5):before {
-background: #ff0000; /* YouTube */
-}
-
-.redes-sociales a:hover:before {
-filter: blur(3px);
-transform: scale(1.2);
-}
-
-/* Cambiar color y sombra al pasar el ratón sobre cada ícono */
-.redes-sociales a:hover  {
-color: #456cba;
-box-shadow: 0 0 15px #4267B2;
-text-shadow: 0 0 15px #4267B2;
-
-}
-
-
-.logo-pequeno,
-.logo-abajo img {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-}
-
-.linea-divisora {
-  border: none;
-  border-top: 2px solid #30c7b5;
-  width: 100px;
-  margin-top: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Nueva sección para los botones en el footer */
-.botones-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  padding: 0 20px;
-}
-
-/* Nueva sección para el logo abajo de los botones */
-.logo-abajo {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.logo-abajo img {
-  width: 30%; /* Ajuste de tamaño */
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Nueva sección para la imagen de fondo "¿Vamos de ruta?" */
-.vamos-de-ruta {
-  background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat; /* Fondo de la imagen */
-  color: #fff;
-  text-align: center;
-  padding: 5%;
-  animation: fadeInUp 1s ease-out;
-  margin-top: 5px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.vamos-de-ruta h2,
-.vamos-de-ruta p,
-.vamos-de-ruta a {
-  color: #fff;
-}
-
-.vamos-de-ruta a {
-  display: inline-block;
-  padding: 12px 80px;
-  background-color: transparent;
-  color: #fff;
-  text-decoration: none;
-  border: 2px solid #fff; /* Línea blanca alrededor del botón */
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.vamos-de-ruta a:hover {
-  background-color: #fff;
-  color: #30c7b5;
+/* Estilos del botón para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .btn-3 {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
 }
 
 /* Estilos del slider */
@@ -332,121 +177,199 @@ img {
   transform: translateX(0) scale(1);
   z-index: 1;
 }
-@media screen and (max-width: 767px) {
-  .botones-footer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .boton-me-conoces,
-  .boton-servicio,
-  .boton-hablemos {
-    width: 50%;
-    margin-bottom: 10px;
-  }
-
-  .boton-me-conoces {
-    order: 3;
-  }
-
-  .boton-servicio {
-    order: 1;
-  }
-
-  .boton-hablemos {
-    order: 2;
-  }
-}
-
-.resolucion {
-  width: 99%;
-  text-align: center;
-}
-
-.container {
-  width: 100%;
-  max-width: 800px;
-  height: 100%;
-  max-height: 600px;
-  transform-style: preserve-3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.input[type=radio] {
-  display: none;
-}
-
-.cards {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.card {
-  position: absolute;
-  width: 60%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-#item-2:checked ~ .cards #selector-1,
-#item-1:checked ~ .cards #selector-3,
-#item-3:checked ~ .cards #selector-2 {
-  transform: translateX(-40%) scale(0.8);
-  opacity: 0.6;
-  z-index: 0;
-}
-
-#item-3:checked ~ .cards #selector-1,
-#item-1:checked ~ .cards #selector-2,
-#item-2:checked ~ .cards #selector-3 {
-  transform: translateX(50%) scale(0.8);
-  opacity: 0.6;
-  z-index: 0;
-}
-
-#item-1:checked ~ .cards #selector-1,
-#item-2:checked ~ .cards #selector-2,
-#item-3:checked ~ .cards #selector-3 {
-  transform: translateX(0) scale(1);
-  z-index: 1;
-}
 
 /* Estilos del slider para dispositivos móviles */
 @media screen and (max-width: 767px) {
   .container__slider {
-    height: 300px; /* Ajusta la altura según sea necesario para dispositivos móviles */
+    height: 300px;
   }
 
   .container {
-    max-width: 100%; /* Utiliza el ancho completo del dispositivo móvil */
+    max-width: 100%;
     height: 100%;
-    max-height: none; /* Elimina la altura máxima para adaptarse al contenido */
+    max-height: none;
   }
 
   .card {
-    width: 80%; /* Ajusta el ancho de la tarjeta para dispositivos móviles */
+    width: 80%;
   }
 }
 
-body {
-  background-color: rgb(46, 46, 46);
-  color: white; /* Puedes ajustar el color del texto según tus preferencias */
+.servicios {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
 }
 
+.redes-sociales {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.redes-sociales ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.redes-sociales li {
+  margin: 0 15px;
+}
+
+.redes-sociales a {
+  position: relative;
+  display: block;
+  color: #666;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  background: #171515;
+  line-height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.redes-sociales a:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  transform: scale(.9);
+  z-index: -1;
+  transition: .5s;
+}
+
+/* Establecer colores de fondo para cada ícono de red social */
+.redes-sociales a:nth-child(1):before {
+  background: #4267B2; /* Facebook */
+}
+
+.redes-sociales a:nth-child(2):before {
+  background: #1DA1F2; /* Twitter */
+}
+
+.redes-sociales a:nth-child(3):before {
+  background: #E1306C; /* Instagram */
+}
+
+.redes-sociales a:nth-child(4):before {
+  background: #921ec7; /* LinkedIn */
+}
+
+.redes-sociales a:nth-child(5):before {
+  background: #ff0000; /* YouTube */
+}
+
+.redes-sociales a:hover:before {
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+/* Cambiar color y sombra al pasar el ratón sobre cada ícono */
+.redes-sociales a:hover  {
+  color: #456cba;
+  box-shadow: 0 0 15px #4267B2;
+  text-shadow: 0 0 15px #4267B2;
+}
+
+.logo-pequeno,
+.logo-abajo img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.linea-divisora {
+  border: none;
+  border-top: 2px solid #30c7b5;
+  width: 100px;
+  margin-top: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Nueva sección para los botones en el footer */
+.botones-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+/* Nueva sección para el logo abajo de los botones */
+.logo-abajo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logo-abajo img {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Nueva sección para la imagen de fondo "¿Vamos de ruta?" */
+.vamos-de-ruta {
+  background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 5%;
+  animation: fadeInUp 1s ease-out;
+  margin-top: 5px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vamos-de-ruta h2,
+.vamos-de-ruta p,
+.vamos-de-ruta a {
+  color: #fff;
+}
+
+.vamos-de-ruta a {
+  display: inline-block;
+  padding: 12px 80px;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.vamos-de-ruta a:hover {
+  background-color: #fff;
+  color: #30c7b5;
+}
+
+/* Nueva sección para los botones en el footer */
+.botones-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+/* Nueva sección para el logo abajo de los botones */
+.logo-abajo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logo-abajo img {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+}
 
 /* Resto de estilos... (copiar desde aquí hasta el final del archivo) */

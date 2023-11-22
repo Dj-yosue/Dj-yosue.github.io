@@ -33,28 +33,70 @@ section {
   text-align: center;
 }
 
-.boton-me-conoces,
-.boton-servicio,
-.boton-hablemos {
-  display: inline-block;
-  padding: 12px 80px;
-  background-color: #30c7b5;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+@import url('https://fonts.google.com/share?selection.family=Open+Sans:ital,wght@1,300');
+
+/* Resto de estilos... (copiar desde aquí hasta el final del archivo) */
+
+/* Nuevos estilos para el botón */
+.nuevo-boton {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.boton-me-conoces:hover,
-.boton-servicio:hover,
-.boton-hablemos:hover {
-  background-color: #25a999;
+.nuevo-boton .contenedor {
+  display: flex;
+  justify-content: center;
 }
+
+.btn-3 {
+  position: relative;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 10px;
+  text-indent: 10px;
+  z-index: 2;
+  transition: all 0.6s ease;
+}
+
+.btn-3::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 110%;
+  left: -10%;
+  top: 0;
+  transform: skew(20deg, 0deg);
+  background-color: #ffffff;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.btn-3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: skew(20deg, 0deg);
+  border: 3px solid #cecece;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.btn-3:hover::after {
+  background-color: #e6e6e694;
+  transform: skew(20deg, 0deg) translateX(240px);
+}
+
+.btn-3:hover::before {
+  background-color: #8d8d8d;
+  border: 3px solid #e0e0e0;
+  transform: skew(20deg, 0deg) scale(1.1);
+}
+
+
 
 .servicios {
   margin-top: 20px;
@@ -184,9 +226,9 @@ text-shadow: 0 0 15px #4267B2;
   background: url('fotos_de_servicio/vamos_de_paso.jpg') center/cover no-repeat; /* Fondo de la imagen */
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 5%;
   animation: fadeInUp 1s ease-out;
-  margin-top: 20px;
+  margin-top: 5px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -455,43 +497,3 @@ body {
 
 
 /* Resto de estilos... (copiar desde aquí hasta el final del archivo) */
-.resolucion {
-  width: 99%;
-  text-align: center;
-}
-
-
-/**Movil**/
-
-@media (max-width: 767px) {
-  .desktop {
-      display: none;
-  }
-  .tablet {
-      display: none;
-  }
-}
-
-
-/**Tablet**/
-
-@media (min-width: 768px) and (max-width: 990px) {
-  .desktop {
-      display: none;
-  }
-  .movil {
-      display: none;
-  }
-}
-
-
-/**Escritorio**/
-
-@media (min-width: 991px) {
-  .tablet {
-      display: none;
-  }
-  .movil {
-      display: none;
-  }
-}

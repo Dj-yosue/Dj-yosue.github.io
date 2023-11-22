@@ -372,7 +372,6 @@ img {
   border-radius: 8px;
 }
 
-
 :root{
     --color: #17a2ff;
 }
@@ -395,7 +394,6 @@ img {
     text-indent: 10px;
     z-index: 2;
 }
-
 
 .btn-2{
     border: 3px solid;
@@ -439,7 +437,6 @@ img {
     transform: rotate(90deg);
     color: var(--color);
 }
-
 
 /* Resto de estilos... (copiar desde aquí hasta el final del archivo) */
 

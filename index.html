@@ -48,7 +48,7 @@
     <script>
 
 document.addEventListener("DOMContentLoaded", function () {
-  const interval = 5000; // 5 segundos
+  const interval = 5300; // 5.3 segundos
   let currentSlide = 1;
   let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   let intervalId;
@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Reanuda el intervalo cuando la ventana vuelve a tener el foco
   window.addEventListener("focus", function () {
+    clearInterval(intervalId); // Limpiar intervalo existente para evitar acumulación
     startInterval();
   });
 });
@@ -137,4 +138,3 @@ document.addEventListener("DOMContentLoaded", function () {
 </body>
 
 </html>
-

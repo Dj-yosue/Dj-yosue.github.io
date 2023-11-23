@@ -474,13 +474,12 @@ body {
 
 /* ... (código previo) ... */
 
-/* Estilos del slider para dispositivos móviles */
+/* Estilos del botón para dispositivos móviles */
 @media screen and (max-width: 767px) {
-
   .btn-3 {
     font-size: 16px;
-    padding: 15px 30px;
-    letter-spacing: 8px;
+    padding: 15px 40px; /* Aumento el padding horizontal para hacerlo más largo */
+    letter-spacing: 2px; 
   }
 
   .nuevo-boton .contenedor {
@@ -504,3 +503,45 @@ body {
     transform: skew(20deg, 0deg) scale(1.1);
   }
 }
+
+/* ... (código posterior) ... */
+
+
+
+
+
+/* ... (código previo) ... */
+
+/* Estilos del botón "Servicio de DJ" para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .btn-2 {
+    padding: 20px 40px; /* Ajusta el padding horizontal para hacerlo más largo */
+    letter-spacing: 5px; /* Reduzco el espaciado para mejorar la legibilidad */
+  }
+
+  .btn-2 span:nth-child(n) {
+    width: 8px; /* Ajusta el ancho de las líneas */
+    height: 8px;
+    border: 2px solid; /* Ajusta el grosor de las líneas */
+  }
+
+  .btn-2 span:nth-child(1) {
+    right: 8%; /* Ajusta la posición lateral */
+    top: -8px; /* Ajusta la posición superior */
+  }
+
+  .btn-2 span:nth-child(2) {
+    left: 8%; /* Ajusta la posición lateral */
+    bottom: -8px; /* Ajusta la posición inferior */
+  }
+
+  .btn-2:hover span:nth-child(1) {
+    right: 72%; /* Ajusta la posición lateral al hacer hover */
+  }
+
+  .btn-2:hover span:nth-child(2) {
+    left: 72%; /* Ajusta la posición lateral al hacer hover */
+  }
+}
+
+/* ... (código posterior) ... */

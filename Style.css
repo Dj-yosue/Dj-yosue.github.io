@@ -1,4 +1,8 @@
 /* Estilos previos al nuevo código del slider */
+:root {
+  --color: #17a2ff;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;
@@ -34,8 +38,6 @@ section {
 }
 
 @import url('https://fonts.google.com/share?selection.family=Open+Sans:ital,wght@1,300');
-
-/* Resto de estilos... (copiar desde aquí hasta el final del archivo) */
 
 /* Nueva sección para el nuevo botón */
 .nuevo-boton {
@@ -81,7 +83,7 @@ section {
   top: 0;
   transform: skew(20deg, 0deg);
   border: 3px solid #cecece;
-  transition: all 0.4s ;
+  transition: all 0.4s;
   z-index: -1;
 }
 
@@ -394,70 +396,69 @@ img {
   border-radius: 8px;
 }
 
-:root{
-    --color: #17a2ff;
+:root {
+  --color: #17a2ff;
 }
 
-.contenedor{
-    display: flex;
-    height: 100vh;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+.contenedor {
+  display: flex;
+  height: 100vh;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.btn{
-    position: relative;
-    padding: 20px 50px;
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: 10px;
-    text-indent: 10px;
-    z-index: 2;
+.btn {
+  position: relative;
+  padding: 20px 50px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 10px;
+  text-indent: 10px;
+  z-index: 2;
 }
 
-.btn-2{
-    border: 3px solid;
+.btn-2 {
+  border: 3px solid;
 }
 
-.btn-2:hover{
-    background-color: #001a2b;
-    box-shadow: 0 0 20px var(--color);
-    border-color: var(--color);
+.btn-2:hover {
+  background-color: #001a2b;
+  box-shadow: 0 0 20px var(--color);
+  border-color: var(--color);
 }
 
-.btn-2 span:nth-child(n){
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border: 3px solid;
-    transition: all 0.6s ease;
+.btn-2 span:nth-child(n) {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 3px solid;
+  transition: all 0.6s ease;
 }
 
-.btn-2 span:nth-child(1){
-    right: 10%;
-    top: -10px;
-    background-color: #fff;
+.btn-2 span:nth-child(1) {
+  right: 10%;
+  top: -10px;
+  background-color: #fff;
 }
 
-.btn-2 span:nth-child(2){
-    left: 10%;
-    bottom: -10px;
+.btn-2 span:nth-child(2) {
+  left: 10%;
+  bottom: -10px;
 }
 
-.btn-2:hover span:nth-child(1){
-    right: 80%;
-    transform: rotate(90deg);
-    color: var(--color);
-    background-color: var(--color);
-    
+.btn-2:hover span:nth-child(1) {
+  right: 80%;
+  transform: rotate(90deg);
+  color: var(--color);
+  background-color: var(--color);
 }
 
-.btn-2:hover span:nth-child(2){
-    left: 80%;
-    transform: rotate(90deg);
-    color: var(--color);
+.btn-:hover span:nth-child(2) {
+  left: 80%;
+  transform: rotate(90deg);
+  color: var(--color);
 }
 
 /* Resto de estilos... (copiar desde aquí hasta el final del archivo) */
@@ -465,4 +466,41 @@ img {
 body {
   background-color: rgba(34, 34, 34, 0.932);
   color: white; /* Esto establece el color del texto en blanco para mayor legibilidad */
+}
+
+
+
+
+
+/* ... (código previo) ... */
+
+/* Estilos del slider para dispositivos móviles */
+@media screen and (max-width: 767px) {
+
+  .btn-3 {
+    font-size: 16px;
+    padding: 15px 30px;
+    letter-spacing: 8px;
+  }
+
+  .nuevo-boton .contenedor {
+    flex-direction: column;
+  }
+
+  .btn-3::after {
+    width: 8%;
+  }
+
+  .btn-3::before {
+    border: 2px solid #cecece;
+  }
+
+  .btn-3:hover::after {
+    transform: skew(20deg, 0deg) translateX(140px);
+  }
+
+  .btn-3:hover::before {
+    border: 2px solid #e0e0e0;
+    transform: skew(20deg, 0deg) scale(1.1);
+  }
 }

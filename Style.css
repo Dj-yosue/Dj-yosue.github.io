@@ -81,7 +81,7 @@ section {
   top: 0;
   transform: skew(20deg, 0deg);
   border: 3px solid #cecece;
-  transition: all 0.4s ease;
+  transition: all 0.4s ;
   z-index: -1;
 }
 
@@ -96,11 +96,33 @@ section {
   transform: skew(20deg, 0deg) scale(1.1);
 }
 
-/* Estilos del botón para dispositivos móviles */
+/* Estilos del botón "Me conoces" para dispositivos móviles */
 @media screen and (max-width: 767px) {
   .btn-3 {
-    font-size: 14px;
-    padding: 12px 24px;
+    font-size: 16px;
+    padding: 15px 30px;
+    letter-spacing: 8px;
+  }
+
+  .nuevo-boton .contenedor {
+    flex-direction: column;
+  }
+
+  .btn-3::after {
+    width: 8%;
+  }
+
+  .btn-3::before {
+    border: 2px solid #cecece;
+  }
+
+  .btn-3:hover::after {
+    transform: skew(20deg, 0deg) translateX(140px);
+  }
+
+  .btn-3:hover::before {
+    border: 2px solid #e0e0e0;
+    transform: skew(20deg, 0deg) scale(1.1);
   }
 }
 
@@ -395,17 +417,17 @@ img {
     z-index: 2;
 }
 
-.btn-2{
+.btn-1{
     border: 3px solid;
 }
 
-.btn-2:hover{
+.btn-1:hover{
     background-color: #001a2b;
     box-shadow: 0 0 20px var(--color);
     border-color: var(--color);
 }
 
-.btn-2 span:nth-child(n){
+.btn-1 span:nth-child(n){
     position: absolute;
     width: 10px;
     height: 10px;
@@ -413,18 +435,18 @@ img {
     transition: all 0.6s ease;
 }
 
-.btn-2 span:nth-child(1){
+.btn-1 span:nth-child(1){
     right: 10%;
     top: -10px;
     background-color: #fff;
 }
 
-.btn-2 span:nth-child(2){
+.btn-1 span:nth-child(2){
     left: 10%;
     bottom: -10px;
 }
 
-.btn-2:hover span:nth-child(1){
+.btn-1:hover span:nth-child(1){
     right: 80%;
     transform: rotate(90deg);
     color: var(--color);
@@ -432,7 +454,7 @@ img {
     
 }
 
-.btn-2:hover span:nth-child(2){
+.btn-1:hover span:nth-child(2){
     left: 80%;
     transform: rotate(90deg);
     color: var(--color);

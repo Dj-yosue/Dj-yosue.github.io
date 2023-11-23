@@ -48,9 +48,10 @@
     <script>
 
 document.addEventListener("DOMContentLoaded", function () {
-  const interval = 4000; // 4 segundos
+  const interval = 5000; // 5 segundos
   let currentSlide = 1;
   let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  let intervalId;
 
   function changeSlide() {
     document.getElementById(`item-${currentSlide}`).checked = true;
@@ -60,16 +61,30 @@ document.addEventListener("DOMContentLoaded", function () {
   // Inicia la primera vez sin esperar la interacción del usuario
   changeSlide();
 
+  // Función para iniciar el intervalo en dispositivos móviles
+  function startInterval() {
+    intervalId = setInterval(changeSlide, interval);
+  }
+
   // Escucha el evento táctil solo en dispositivos móviles
   if (isMobile) {
-    document.addEventListener("touchstart", function () {
-      setInterval(changeSlide, interval);
-    });
+    document.addEventListener("touchstart", startInterval);
   } else {
     // En dispositivos no móviles, inicia la animación automáticamente
-    setInterval(changeSlide, interval);
+    startInterval();
   }
+
+  // Detiene el intervalo cuando la ventana pierde el foco
+  window.addEventListener("blur", function () {
+    clearInterval(intervalId);
+  });
+
+  // Reanuda el intervalo cuando la ventana vuelve a tener el foco
+  window.addEventListener("focus", function () {
+    startInterval();
+  });
 });
+
 
       </script>
 
@@ -122,3 +137,4 @@ document.addEventListener("DOMContentLoaded", function () {
 </body>
 
 </html>
+

@@ -48,7 +48,7 @@
     <script>
 
 document.addEventListener("DOMContentLoaded", function () {
-  const interval = 5300; // 5.3 segundos
+  const interval = 5000; // 5 segundos
   let currentSlide = 1;
   let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   let intervalId;
@@ -58,19 +58,19 @@ document.addEventListener("DOMContentLoaded", function () {
     currentSlide = (currentSlide % 3) + 1;
   }
 
-  // Inicia la primera vez sin esperar la interacción del usuario
-  changeSlide();
-
   // Función para iniciar el intervalo
   function startInterval() {
     clearInterval(intervalId); // Limpiar intervalo existente para evitar acumulación
     intervalId = setInterval(changeSlide, interval);
   }
 
+  // Inicia la primera vez sin esperar la interacción del usuario
+  changeSlide();
+
   // Escucha el evento táctil y otros eventos de interacción en dispositivos móviles
   if (isMobile) {
-    ["touchstart", "touchmove", "touchend", "touchcancel"].forEach(function (event) {
-      document.addEventListener(event, startInterval);
+    document.addEventListener("touchstart", function () {
+      startInterval();
     });
   } else {
     // En dispositivos no móviles, inicia la animación automáticamente

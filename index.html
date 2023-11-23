@@ -61,14 +61,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Inicia la primera vez sin esperar la interacción del usuario
   changeSlide();
 
-  // Función para iniciar el intervalo en dispositivos móviles
+  // Función para iniciar el intervalo
   function startInterval() {
+    clearInterval(intervalId); // Limpiar intervalo existente para evitar acumulación
     intervalId = setInterval(changeSlide, interval);
   }
 
-  // Escucha el evento táctil solo en dispositivos móviles
+  // Escucha el evento táctil y otros eventos de interacción en dispositivos móviles
   if (isMobile) {
-    document.addEventListener("touchstart", startInterval);
+    ["touchstart", "touchmove", "touchend", "touchcancel"].forEach(function (event) {
+      document.addEventListener(event, startInterval);
+    });
   } else {
     // En dispositivos no móviles, inicia la animación automáticamente
     startInterval();
@@ -80,10 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Reanuda el intervalo cuando la ventana vuelve a tener el foco
-  window.addEventListener("focus", function () {
-    clearInterval(intervalId); // Limpiar intervalo existente para evitar acumulación
-    startInterval();
-  });
+  window.addEventListener("focus", startInterval);
 });
 
 
@@ -138,3 +138,4 @@ document.addEventListener("DOMContentLoaded", function () {
 </body>
 
 </html>
+

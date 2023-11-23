@@ -44,10 +44,44 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const interval = 4000; // 4 segundos
+  let currentSlide = 1;
+  let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  function changeSlide() {
+    document.getElementById(`item-${currentSlide}`).checked = true;
+    currentSlide = (currentSlide % 3) + 1;
+  }
+
+  // Inicia la primera vez sin esperar la interacción del usuario
+  changeSlide();
+
+  // Escucha el evento táctil solo en dispositivos móviles
+  if (isMobile) {
+    document.addEventListener("touchstart", function () {
+      setInterval(changeSlide, interval);
+    });
+  } else {
+    // En dispositivos no móviles, inicia la animación automáticamente
+    setInterval(changeSlide, interval);
+  }
+});
+
+      </script>
+
     <!-- Fin del código del slider -->
 
     <section>
-        <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="btn btn-2">Servicio de DJ</a>
+        <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="btn btn-1">
+            <span></span>
+            <span></span>
+            Servicio de DJ
+        </a>
+        <h2>.</h2>
         <h2>"Deja que la música te lleve a lugares donde la libertad reina"</h2>
         <img class="logo-pequeno" src="fotos_de_servicio\logo_pequeño.jpg" alt="Logo pequeño">
         <p>DJ Yosue</p>

@@ -46,9 +46,9 @@
     </div>
 
     <script>
-
+    
 document.addEventListener("DOMContentLoaded", function () {
-  const interval = 3000; // 4 segundos
+  const interval = 3000; // 3 segundos
   let currentSlide = 1;
   let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   let intervalId;
@@ -86,9 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("focus", startInterval);
 });
 
-
-      </script>
-
+    </script>
     <!-- Fin del código del slider -->
 
     <section>
@@ -96,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <span></span>
             <span></span>
             Servicio de DJ
-        </a>
+        </a>        
         <h2>.</h2>
         <h2>"Deja que la música te lleve a lugares donde la libertad reina"</h2>
         <img class="logo-pequeno" src="fotos_de_servicio\logo_pequeño.jpg" alt="Logo pequeño">
@@ -108,34 +106,38 @@ document.addEventListener("DOMContentLoaded", function () {
         <h2>¿Vamos de ruta?</h2>
         <p>Escucha mis mejores mezclas en Spotify y disfrútalas… 🙂</p>
         <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="boton-hablemos">¡Hazlo Sonar!</a>
-    </section>
+    </section>                  
 
     <!-- Nueva sección para las redes sociales -->
     <section class="redes-sociales">
         <h2>Redes Sociales</h2>
         <ul>
             <li><a href="enlace-de-facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+
             <li><a href="enlace-de-twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+
             <li><a href="enlace-de-instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+
             <li><a href="enlace-de-tiktok" target="_blank"><i class="fab fa-tiktok"></i></a></li>
         </ul>
     </section>
 
-    <!-- Nueva sección para los botones en el footer -->
     <section class="botones-footer">
-        <a href="https://sites.google.com/view/dj-yosue/me-conoces" class="boton-me-conoces">¿Me conoces?</a>
-        <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="boton-servicio">Servicio de DJ</a>
-        <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="boton-hablemos">¡Hablemos!</a>
-    </section>
 
-    <!-- Nueva sección para el logo abajo de los botones -->
-    <section class="logo-abajo">
+        <div class="stack-movil">
+          <a href="https://sites.google.com/view/dj-yosue/me-conoces" class="btno btn-1">¿Me conoces?</a>
+      
+          <a href="https://sites.google.com/view/dj-yosue/servicios-de-dj" class="btno btn-1">Servicio de DJ</a>
+      
+          <a href="https://sites.google.com/view/dj-yosue/p%C3%A1gina-principal" class="btno btn-1">¡Hablemos!</a>
+        </div>
+        
+      </section>
+      
+      <section class="logo-abajo">
         <img src="fotos_de_servicio\imagen_del_logo_abajo.jpg" alt="Logo abajo">
-    </section>
-
-    <!-- Eliminé el segundo conjunto de head y body, ya que solo puede haber uno de cada en un documento HTML -->
+      </section>
 
 </body>
 
 </html>
-
